@@ -28,8 +28,8 @@ li {
 }
 
 .container {
-  min-width: 85vw;
-  max-width: 85vw;
+  min-width: 90vw;
+  max-width: 90vw;
   margin: auto;
 }
 
@@ -40,7 +40,7 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 70px;
-    padding: 18px 0;
+    padding: 20px 0;
 
     .logo {
       height: 70px;
@@ -55,7 +55,7 @@ header {
       gap: 50px;
 
       a {
-        color: black;
+        color: #1A1A1A;
         font-weight: bold;
         font-size: 18px;
       }
