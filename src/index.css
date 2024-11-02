@@ -1,0 +1,66 @@
+:root {
+  --test-width: 402px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  min-width: 85vw;
+  max-width: 85vw;
+  margin: auto;
+}
+
+/* Start Header */
+header {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 18px 0;
+
+    .logo {
+      height: 70px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .links {
+      display: flex;
+      gap: 50px;
+
+      a {
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/* End Header */
