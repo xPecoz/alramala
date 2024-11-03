@@ -1,6 +1,10 @@
 import React from "react";
 import "./Home.css";
 import Hero from "../../imgs/hero.png";
+import Rectangle5 from "../../imgs/Rectangle 5.png";
+import Rectangle8 from "../../imgs/Rectangle 8.png";
+import Rectangle6 from "../../imgs/Rectangle 6.png";
+import Rectangle7 from "../../imgs/Rectangle 7.png";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -83,13 +87,13 @@ const Home = () => {
             </Link>
           </div>
           <div className="imgs">
-            <div>
-              <img />
-              <img />
+            <div className="imgsBox">
+              <img src={Rectangle5} />
+              <img src={Rectangle8} />
             </div>
-            <div>
-              <img />
-              <img />
+            <div className="imgsBox">
+              <img src={Rectangle6} />
+              <img src={Rectangle7} />
             </div>
           </div>
         </div>
