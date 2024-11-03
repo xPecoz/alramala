@@ -32,35 +32,3 @@ li {
   max-width: 90vw;
   margin: auto;
 }
-
-/* Start Header */
-header {
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 70px;
-    padding: 20px 0;
-
-    .logo {
-      height: 70px;
-
-      img {
-        height: 100%;
-      }
-    }
-
-    .links {
-      display: flex;
-      gap: 50px;
-
-      a {
-        color: #1A1A1A;
-        font-weight: bold;
-        font-size: 18px;
-      }
-    }
-  }
-}
-
-/* End Header */
