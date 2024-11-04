@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
 
 a {
   text-decoration: none;
@@ -28,7 +32,6 @@ li {
 }
 
 .container {
-  min-width: 90vw;
-  max-width: 90vw;
+  width: 90vw;
   margin: auto;
 }
