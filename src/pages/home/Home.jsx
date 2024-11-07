@@ -5,6 +5,8 @@ import Rectangle5 from "../../imgs/Rectangle 5.png";
 import Rectangle8 from "../../imgs/Rectangle 8.png";
 import Rectangle6 from "../../imgs/Rectangle 6.png";
 import Rectangle7 from "../../imgs/Rectangle 7.png";
+import contactImg from '../../imgs/contactImg.jpg';
+
 import { Link } from "react-router-dom";
 import MainTitle from "../../components/title/mainTitle";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,6 +22,7 @@ function Home() {
       <Projects />
       <Testimonial />
       <OurParteners />
+      <Contact /> 
     </main>
   );
 }
@@ -429,4 +432,53 @@ const SwiperSliderParteners = () => {
     </Swiper>
   );
 };
+
+
+export function Contact() {
+  const [fly, setFly] = useState(false);
+
+  const handleLaunch = (event) => {
+    event.preventDefault();
+    setFly(true);
+    setTimeout(() => {
+      submitForm();
+      window.location.reload();
+    }, 1000);
+  };
+
+  const submitForm = () => {
+    console.log("Form submitted!");
+  };
+    
+  return (
+      <section className="contact">
+          <h1>Contact Us</h1>
+          <div className="container">
+              <span className='heading'>
+              <h1>Get in touch</h1>
+              <p>Reach out, and let's create a universe of possibilities together!</p>
+              </span>
+              <span className='form-container'>
+              <div className='Form'>
+                  <h1>Let’s Connect Constellations</h1>
+                  <p>Let's align our constellations! Reach out and let the magic of collaboration illuminate our skies.</p>
+                  <form>
+                      <span className='name-input'>
+                          <input type="text" placeholder="First Name" />
+                          <input type="text" placeholder="Last Name" />
+                      </span>
+                      <input type="email" placeholder="Email" />
+                      <input type="tel" placeholder="Phone Number" />
+                      <textarea placeholder="Message" className='message' />
+                      <button onClick={handleLaunch}>Send it to the moon <i className={`fas fa-rocket rocket-icon ${fly ? 'fly' : ''}`}></i></button>
+                  </form>
+              </div>
+              <div className='image'>
+                  <img src={contactImg} alt="contact-img" />
+              </div>
+              </span>
+          </div>
+      </section>
+  )
+}
 export default Home;

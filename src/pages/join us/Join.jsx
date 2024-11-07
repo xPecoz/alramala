@@ -1,8 +1,8 @@
 import "./Join.css";
 function JoinUs() {
   return (
-    <section className="join-us">
-      <div className="container">
+    <section className="join-us standardJoin">
+      <StandardJoin>
         <span>Get Started</span>
         <div className="join-heading-container">
           <h1>
@@ -20,7 +20,7 @@ function JoinUs() {
             </li>
           </ul>
         </div>
-      </div>
+      </StandardJoin>
       <div className="join-us-form">
         <div className="container">
           <div className="join-us-container">
@@ -64,5 +64,8 @@ function JoinUs() {
       </div>
     </section>
   );
+}
+export function StandardJoin({ children }) {
+  return <div className="container">{children}</div>;
 }
 export default JoinUs;
