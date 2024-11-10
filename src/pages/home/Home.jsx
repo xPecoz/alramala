@@ -81,7 +81,9 @@ function AboutSection() {
             <div className="box">
               <h2>1</h2>
               <h3>Mission</h3>
-              <p>It makes people at ease and feel like they want to open up.</p>
+              <p>
+                It makes people at ease and feel like they want to open up.
+              </p>
             </div>
             <div className="box">
               <h2>2</h2>
@@ -102,7 +104,7 @@ function AboutSection() {
               <p>Art that has meaning to the people who live in the space,</p>
             </div>
           </div>
-          <Link to="#" className="readMore">
+          <Link to="/about" className="readMore">
             Read More
           </Link>
         </div>

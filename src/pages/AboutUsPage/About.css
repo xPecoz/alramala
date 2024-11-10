@@ -1,0 +1,223 @@
+.about .ThingsWeValue .container {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    /* height: calc(100vh - 70px); */
+  }
+  
+  .about .ThingsWeValue .title {
+    color: black;
+    font-size: 100px;
+    font-weight: bold;
+  }
+  
+  .about .ThingsWeValue .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 63px;
+    height: 100%;
+  }
+  
+  .about .ThingsWeValue .boxs .box {
+    position: relative;
+    max-width: 363px;
+    height: 588px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .about .ThingsWeValue .boxs .box h3 {
+    color: white;
+    font-size: 48px;
+    font-weight: 600;
+  }
+  
+  .about .ThingsWeValue .boxs .box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+  }
+  
+  .about .MakeDifferent {
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .about .MakeDifferent .container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .about .MakeDifferent .container .search {
+    margin: auto;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 12px;
+  }
+  
+  .about .MakeDifferent .container .search input {
+    background-color: transparent;
+    border: 0;
+    outline: none !important;
+    font-size: 20px;
+    width: 500px;
+  }
+  
+  .about .MakeDifferent .title {
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .about .MakeDifferent .boxs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .about .MakeDifferent .boxs .box {
+    padding: 20px 25px;
+    border-radius: 12px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .about .MakeDifferent .boxs .box .text {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .about .MakeDifferent .boxs .box .boxTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .about .MakeDifferent .boxs .box .boxTitle div {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .about .MakeDifferent .boxs .box .boxTitle h3 {
+    font-size: 30px;
+  }
+  
+  .about .MakeDifferent .boxs .box .boxTitle .icon {
+    cursor: pointer;
+  }
+  
+  .about .MakeDifferent .boxs .box .boxTitle .close {
+    display: none;
+  }
+  
+  .about .MakeDifferent .boxs .box .text {
+    display: none;
+  }
+  
+  .about .MakeDifferent .boxs .box .text.show {
+    display: block;
+  }
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    padding: 20px 100px;
+    font-size: 50px;
+}
+
+.top .first {
+    font-size: 100px;
+}
+.top .st-word,
+.top .nd-word,
+.top .rd-word {
+    position: relative;
+}
+.top .st-word::before, 
+.top .nd-word::before,
+.top .rd-word::before {
+    content: "";
+    background: linear-gradient(90deg, #8F7363 25%, #70584b);
+    background-color: #8F7363;
+    width: 91%;
+    height: 20px;
+    position: absolute;
+    top: 30px;
+    z-index: -1000;
+}
+.top .nd-word::before {
+    width: 105%;
+    left: -5px;
+}
+.top .rd-word::before {
+    width: 155%;
+    left: -46px;
+}
+
+.top img {
+    width: 350px;
+    height: 520px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    padding: 20px;
+}
+.cards img {
+    border-radius: 15px;
+}
+
+.cards .cardOne,
+.cards .cardThree {
+    margin-bottom: 250px;
+}
+
+.last {
+    padding: 50px;
+    text-align: start; 
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    height: 85vh;
+}
+
+.last h1 {
+    font-size: 100px;
+    margin: 0 0 20px 50px;
+}
+
+.last p {
+    width: 90%;
+    font-size: 25px;
+}
+
+.last img {
+    position: absolute;
+    top: 165px;
+    right: -124px;
+    width: 380px;
+}

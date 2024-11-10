@@ -102,7 +102,7 @@
 }
 
 /* Start About */
-.about {
+.home .about {
   width: 100%;
   position: relative;
 
@@ -115,38 +115,38 @@
   }
 }
 
-.about .container .info {
+.home .about .container .info {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.about .container .info h1 {
+.home .about .container .info h1 {
   color: #1a1a1a;
   font-size: 64px;
   font-weight: bold;
 }
 
-.about .container .info p {
+.home .about .container .info p {
   color: #818281;
   font-size: 20px;
   line-height: 32px;
   width: 470px;
 }
 
-.about .container .info .boxs {
+.home .about .container .info .boxs {
   display: grid;
   grid-template-columns: calc(50% - 15px) calc(50% - 15px);
   gap: 30px;
 }
 
-.about .container .info .boxs .box {
+.home .about .container .info .boxs .box {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-.about .container .info .boxs .box h2 {
+.home .about .container .info .boxs .box h2 {
   font-family: "Source Sans Pro";
   color: #8f7363;
   font-size: 64px;
@@ -154,7 +154,7 @@
   line-height: 64px;
 }
 
-.about .container .info .boxs .box h3 {
+.home .about .container .info .boxs .box h3 {
   font-family: "Source Sans Pro";
   color: #2e302e;
   font-size: 24px;
@@ -162,7 +162,7 @@
   line-height: 24px;
 }
 
-.about .container .info .boxs .box p {
+.home .about .container .info .boxs .box p {
   font-family: "Source Sans Pro";
   max-width: 100%;
   white-space: wrap;
@@ -170,7 +170,7 @@
   font-size: 20px;
 }
 
-.about .container .info .readMore {
+.home .about .container .info .readMore {
   width: 225px;
   padding: 10px;
   border-radius: 6px;
@@ -184,14 +184,14 @@
   margin-top: 20px;
 }
 
-.about .container .imgs {
+.home .about .container .imgs {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
 }
 
-.about .container .imgs .imgsBox {
+.home .about .container .imgs .imgsBox {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -201,10 +201,9 @@
   }
 }
 
-.about .container .imgs .imgsBox:first-of-type {
+.home .about .container .imgs .imgsBox:first-of-type {
   margin-top: 76px;
 }
-
 /* End About */
 
 /*******projects**********/
@@ -528,7 +527,6 @@
 .our-parteners .swiper-slide img {
   width: 100%;
 }
-
 /* Start Contact  */
 .contact input:focus,
 .contact textarea:focus {
@@ -537,6 +535,7 @@
 
 .contact {
   width: 100%;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -544,10 +543,9 @@
   margin-bottom: 100px;
   background-color: #ffffff;
 
-  h1 {
+  .tettle {
+    font-size: 50px;
     color: #1a1a1a;
-    margin-bottom: 10px;
-    font-size: 30px;
   }
 }
 .contact .container {
@@ -587,9 +585,10 @@
   margin-bottom: 20px;
   border-radius: 10px;
   background-color: #3e3f3c;
-  padding: 20px;
 }
-
+.contact > h1{
+  font-size: 30px;
+}
 .Form {
   display: flex;
   flex-direction: column;
@@ -676,7 +675,7 @@
 
 .contact .container .form-container .image {
   width: 95%;
-  height: 100%;
+  height: 400px;
 }
 .contact .container .form-container .image img {
   width: 100%;
