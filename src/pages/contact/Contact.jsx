@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import { Contact } from "../home/Home";
 import { StandardJoin } from "../join us/Join";
-import './Contact.css'
+import "./Contact.css";
 function ConactUsPage() {
   return (
     <section className="contact-us-page standardJoin">
@@ -11,15 +12,23 @@ function ConactUsPage() {
             Get in touch with us. <br /> We're here to assist you.
           </h1>
           <ul className="join-links">
-            <li>
-              <i className="fa-brands fa-facebook-f"></i>
-            </li>
-            <li>
-              <i class="fa-brands fa-instagram"></i>
-            </li>
-            <li>
-              <i class="fa-brands fa-twitter"></i>
-            </li>
+            <Link to="#">
+              {" "}
+              <li>
+                <i className="fa-brands fa-facebook-f"></i>
+              </li>
+            </Link>
+            <Link to={"https://www.instagram.com/alramlaa"}>
+              <li>
+                <i class="fa-brands fa-instagram"></i>
+              </li>
+            </Link>
+
+            <Link to={"https://x.com/alramlaa?s=11&t=gtyKfuYmA87cgVZIjmHc5w"}>
+              <li>
+                <i class="fa-brands fa-twitter"></i>
+              </li>
+            </Link>
           </ul>
         </div>
       </StandardJoin>

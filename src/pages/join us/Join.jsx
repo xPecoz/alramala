@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Join.css";
 function JoinUs() {
   return (
@@ -9,15 +10,23 @@ function JoinUs() {
             Join our team by submitting <br /> an application
           </h1>
           <ul className="join-links">
-            <li>
-              <i className="fa-brands fa-facebook-f"></i>
-            </li>
-            <li>
-              <i class="fa-brands fa-instagram"></i>
-            </li>
-            <li>
-              <i class="fa-brands fa-twitter"></i>
-            </li>
+            <Link to="#">
+              {" "}
+              <li>
+                <i className="fa-brands fa-facebook-f"></i>
+              </li>
+            </Link>
+            <Link to={"https://www.instagram.com/alramlaa"}>
+              <li>
+                <i class="fa-brands fa-instagram"></i>
+              </li>
+            </Link>
+
+            <Link to={"https://x.com/alramlaa?s=11&t=gtyKfuYmA87cgVZIjmHc5w"}>
+              <li>
+                <i class="fa-brands fa-twitter"></i>
+              </li>
+            </Link>
           </ul>
         </div>
       </StandardJoin>

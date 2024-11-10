@@ -222,6 +222,11 @@
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
   position: relative;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
 }
 .projects-section .container .project-item img {
   width: 100%;
@@ -233,11 +238,11 @@
   -o-border-radius: 12px;
   filter: blur(2px);
   -webkit-filter: blur(2px);
-  transition: 0.8s;
-  -webkit-transition: 0.8s;
-  -moz-transition: 0.8s;
-  -ms-transition: 0.8s;
-  -o-transition: 0.8s;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
 }
 .projects-section .container .project-item .project-before {
   position: absolute;
@@ -251,13 +256,15 @@
   color: white;
   font-weight: 600;
   font-size: 22px;
-  transition: 0.8s;
-  -webkit-transition: 0.8s;
-  -moz-transition: 0.8s;
-  -ms-transition: 0.8s;
-  -o-transition: 0.8s;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
   z-index: 12;
+  opacity: 1;
 }
+
 .projects-section .container .project-item::after {
   content: "";
   position: absolute;
@@ -268,32 +275,43 @@
   width: 100%;
   height: 100%;
   backdrop-filter: blur(10px);
-  transition: 0.8s;
-  -webkit-transition: 0.8s;
-  -moz-transition: 0.8s;
-  -ms-transition: 0.8s;
-  -o-transition: 0.8s;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
   border-radius: 12px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
+  opacity: 1;
 }
 .projects-section .container .project-item:hover img {
   filter: blur(0px);
   -webkit-filter: blur(0px);
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
 }
 .projects-section .container .project-item:hover .project-before {
-  display: none;
-  transition: 0.8s;
-  -webkit-transition: 0.8s;
-  -moz-transition: 0.8s;
-  -ms-transition: 0.8s;
-  -o-transition: 0.8s;
+  opacity: 0;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
 }
 .projects-section .container .project-item:hover::after {
-  display: none;
+  opacity: 0;
   backdrop-filter: blur(0);
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
 }
 
 .projects-section a {
@@ -435,9 +453,13 @@
   color: #d0c0ad;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .testimonial-container .testimonial-card {
     flex-direction: column;
+    padding: 0;
+  }
+  .testimonial-container {
+    padding: 5px;
   }
   .testimonial-container .testimonial-content {
     width: 100%;
@@ -451,6 +473,26 @@
   .testimonial-container .testimonial-heading {
     font-size: 30px;
   }
+}
+@media((min-width:673px) and (max-width:802px)){
+  .testimonial-container .image-container {
+    display: flex;
+    justify-content: center;
+  }
+  .testimonial-container .image-container img{
+    width: 300px;
+  }
+  .testimonial-container .image-container::after{
+    right: 50%;
+    left: inherit;
+  }
+}
+@media((min-width:802px) and (max-width:900px)){
+
+  .testimonial-container .image-container{
+    width: 36%;
+  }
+
 }
 
 .testimonial-container .arrow-container {
@@ -586,7 +628,7 @@
   border-radius: 10px;
   background-color: #3e3f3c;
 }
-.contact > h1{
+.contact > h1 {
   font-size: 30px;
 }
 .Form {

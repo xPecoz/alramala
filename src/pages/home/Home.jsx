@@ -131,7 +131,7 @@ function Projects() {
           <img
             src={
               process.env.PUBLIC_URL +
-              "/photos/b1f00db58b0caf614e1d9ba9d2f1319a.png"
+              "/photos/hosipilty.JPG"
             }
             alt=""
           />
@@ -143,7 +143,7 @@ function Projects() {
           <img
             src={
               process.env.PUBLIC_URL +
-              "/photos/22565ae193e2d11d98069e3678eb64a7.png"
+              "/photos/commmercial.jpg"
             }
             alt=""
           />
@@ -155,7 +155,7 @@ function Projects() {
           <img
             src={
               process.env.PUBLIC_URL +
-              "/photos/d01096b064e2940aadef6c0fa7967a91.png"
+              "/photos/entertaiment.jpg"
             }
             alt=""
           />
@@ -167,7 +167,7 @@ function Projects() {
           <img
             src={
               process.env.PUBLIC_URL +
-              "/photos/ce8253324ebd686091a466a6ad8b6f49.png"
+              "/photos/residential.jpg"
             }
             alt=""
           />
@@ -179,7 +179,7 @@ function Projects() {
           <img
             src={
               process.env.PUBLIC_URL +
-              "/photos/b03e02777d4cedb3e75a390d54aecc3a.png"
+              "/photos/education.JPG"
             }
             alt=""
           />
@@ -191,7 +191,7 @@ function Projects() {
           <img
             src={
               process.env.PUBLIC_URL +
-              "/photos/91495903895accde711211fe464abad3.png"
+              "/photos/workspacee.JPG"
             }
             alt=""
           />
@@ -223,7 +223,7 @@ function Testimonial() {
 const testimonials = [
   {
     id: 1,
-    image: "/photos/08037447bc7cca0e5d38e17dde319959.jpg", // replace with actual path or URL of the image
+    image: "/photos/08037447bc7cca0e5d38e17dde319959.jpg", 
     quote: "Amazing service",
     text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     name: "Wade Warren",
@@ -231,7 +231,7 @@ const testimonials = [
   },
   {
     id: 2,
-    image: "/photos/08037447bc7cca0e5d38e17dde319959.jpg", // replace with actual path or URL of the image
+    image: "/photos/08037447bc7cca0e5d38e17dde319959.jpg", 
     quote: "Exceptional quality",
     text: "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
     name: "Sarah Johnson",
@@ -337,7 +337,7 @@ const SwiperSliderParteners = () => {
           <img
             src={
               process.env.PUBLIC_URL +
-              "/photos/91495903895accde711211fe464abad3.png"
+              "/photos/workspacee.JPG"
             }
             alt=""
           />
@@ -348,7 +348,7 @@ const SwiperSliderParteners = () => {
           <img
             src={
               process.env.PUBLIC_URL +
-              "/photos/91495903895accde711211fe464abad3.png"
+              "/photos/workspacee.JPG"
             }
             alt=""
           />
@@ -359,7 +359,7 @@ const SwiperSliderParteners = () => {
           <img
             src={
               process.env.PUBLIC_URL +
-              "/photos/91495903895accde711211fe464abad3.png"
+              "/photos/workspacee.JPG"
             }
             alt=""
           />
@@ -370,7 +370,7 @@ const SwiperSliderParteners = () => {
           <img
             src={
               process.env.PUBLIC_URL +
-              "/photos/91495903895accde711211fe464abad3.png"
+              "/photos/workspacee.JPG"
             }
             alt=""
           />
@@ -381,7 +381,7 @@ const SwiperSliderParteners = () => {
           <img
             src={
               process.env.PUBLIC_URL +
-              "/photos/91495903895accde711211fe464abad3.png"
+              "/photos/workspacee.JPG"
             }
             alt=""
           />
@@ -392,7 +392,7 @@ const SwiperSliderParteners = () => {
           <img
             src={
               process.env.PUBLIC_URL +
-              "/photos/91495903895accde711211fe464abad3.png"
+              "/photos/workspacee.JPG"
             }
             alt=""
           />
@@ -403,7 +403,7 @@ const SwiperSliderParteners = () => {
           <img
             src={
               process.env.PUBLIC_URL +
-              "/photos/91495903895accde711211fe464abad3.png"
+              "/photos/workspacee.JPG"
             }
             alt=""
           />
@@ -414,7 +414,7 @@ const SwiperSliderParteners = () => {
           <img
             src={
               process.env.PUBLIC_URL +
-              "/photos/91495903895accde711211fe464abad3.png"
+              "/photos/workspacee.JPG"
             }
             alt=""
           />
@@ -425,7 +425,7 @@ const SwiperSliderParteners = () => {
           <img
             src={
               process.env.PUBLIC_URL +
-              "/photos/91495903895accde711211fe464abad3.png"
+              "/photos/workspacee.JPG"
             }
             alt=""
           />
