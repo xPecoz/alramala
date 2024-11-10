@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./About.css";
 import aboutVid from "../../imgs/aboutVid.gif";
 import stAbout from "../../imgs/stAbout.png";
@@ -93,15 +93,12 @@ function ThingsWeValue() {
 }
 
 function MakeDifferent() {
-  function showText(e) {
-    let currantBox = e.target.parentElement;
-    let currantText = currantBox.children[1];
+  const [visibleBox, setVisibleBox] = useState(null);
 
-    currantBox?.children[0]?.children[1]?.classList.toggle("close");
-    currantBox?.children[0]?.children[2]?.classList.toggle("close");
+  const toggleText = (index) => {
+    setVisibleBox((prevIndex) => (prevIndex === index ? null : index));
+  };
 
-    currantText.classList.toggle("show");
-  }
   return (
     <section className="MakeDifferent">
       <div className="container">
@@ -112,70 +109,106 @@ function MakeDifferent() {
         </div>
         <div className="boxs">
           <div className="box">
-            <div className="boxTitle" onClick={showText}>
+            <div className="boxTitle" onClick={() => toggleText(0)}>
               <h3>Comprehensive range of solutions</h3>
-              <UilPlus className="icon" size={35} />
-              <UilMinus className="icon close" size={35} />
+              <UilPlus
+                className={`icon ${visibleBox === 0 ? "close" : ""}`}
+                size={35}
+              />
+              <UilMinus
+                className={`icon ${visibleBox === 0 ? "" : "close"}`}
+                size={35}
+              />
             </div>
-            <p className="text">
+            <p className={`text ${visibleBox === 0 ? "show" : ""}`}>
               It is a long established fact that a reader will be distracted by
               the readable content of a
             </p>
           </div>
           <div className="box">
-            <div className="boxTitle" onClick={showText}>
+            <div className="boxTitle" onClick={() => toggleText(1)}>
               <h3>Customized solution</h3>
-              <UilPlus className="icon" size={35} />
-              <UilMinus className="icon close" size={35} />
+              <UilPlus
+                className={`icon ${visibleBox === 1 ? "close" : ""}`}
+                size={35}
+              />
+              <UilMinus
+                className={`icon ${visibleBox === 1 ? "" : "close"}`}
+                size={35}
+              />
             </div>
-            <p className="text">
+            <p className={`text ${visibleBox === 1 ? "show" : ""}`}>
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem
             </p>
           </div>
           <div className="box">
-            <div className="boxTitle" onClick={showText}>
+            <div className="boxTitle" onClick={() => toggleText(2)}>
               <h3>Flexible and budget friendly model</h3>
-              <UilPlus className="icon" size={35} />
-              <UilMinus className="icon close" size={35} />
+              <UilPlus
+                className={`icon ${visibleBox === 2 ? "close" : ""}`}
+                size={35}
+              />
+              <UilMinus
+                className={`icon ${visibleBox === 2 ? "" : "close"}`}
+                size={35}
+              />
             </div>
-            <p className="text">
+            <p className={`text ${visibleBox === 2 ? "show" : ""}`}>
               It is a long established fact that a reader will be distracted by
               the readable content
             </p>
           </div>
           <div className="box">
-            <div className="boxTitle" onClick={showText}>
+            <div className="boxTitle" onClick={() => toggleText(3)}>
               <h3>Strategic approach</h3>
-              <UilPlus className="icon" size={35} />
-              <UilMinus className="icon close" size={35} />
+              <UilPlus
+                className={`icon ${visibleBox === 3 ? "close" : ""}`}
+                size={35}
+              />
+              <UilMinus
+                className={`icon ${visibleBox === 3 ? "" : "close"}`}
+                size={35}
+              />
             </div>
-            <p className="text">
+            <p className={`text ${visibleBox === 3 ? "show" : ""}`}>
               By implementing a strategic approach, you can out compete your
               rivals and achieve success efficiently and effectively.
             </p>
           </div>
           <div className="box">
-            <div className="boxTitle" onClick={showText}>
+            <div className="boxTitle" onClick={() => toggleText(4)}>
               <h3>Committed timelines</h3>
-              <UilPlus className="icon" size={35} />
-              <UilMinus className="icon close" size={35} />
+              <UilPlus
+                className={`icon ${visibleBox === 4 ? "close" : ""}`}
+                size={35}
+              />
+              <UilMinus
+                className={`icon ${visibleBox === 4 ? "" : "close"}`}
+                size={35}
+              />
             </div>
-            <p className="text">
+            <p className={`text ${visibleBox === 4 ? "show" : ""}`}>
               It is a long established fact that a reader will be distracted by
               the readable content
             </p>
           </div>
           <div className="box">
-            <div className="boxTitle" onClick={showText}>
+            <div className="boxTitle" onClick={() => toggleText(5)}>
               <h3>Quality services</h3>
-              <UilPlus className="icon" size={35} />
-              <UilMinus className="icon close" size={35} />
+              <UilPlus
+                className={`icon ${visibleBox === 5 ? "close" : ""}`}
+                size={35}
+              />
+              <UilMinus
+                className={`icon ${visibleBox === 5 ? "" : "close"}`}
+                size={35}
+              />
             </div>
-            <p className="text">
+            <p className={`text ${visibleBox === 5 ? "show" : ""}`}>
               It is a long established fact that a reader will be distracted by
-              the readable content
+              the readable content.
             </p>
           </div>
         </div>
