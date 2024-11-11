@@ -194,7 +194,7 @@ function MakeDifferent() {
               the readable content
             </p>
           </div>
-          <div className="box">
+          <div className="box last-box">
             <div className="boxTitle" onClick={() => toggleText(5)}>
               <h3>Quality services</h3>
               <UilPlus

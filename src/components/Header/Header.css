@@ -3,7 +3,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70px;
+    flex-wrap: wrap;
     padding: 20px 0;
 
     .logo {
@@ -11,6 +11,7 @@ header {
 
       img {
         height: 100%;
+        max-width: 100%;
       }
     }
 
@@ -23,6 +24,78 @@ header {
         font-weight: bold;
         font-size: 18px;
       }
+    }
+  }
+}
+
+header .showMenuMobile {
+  display: none;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+header .mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1A1A1A;
+  padding: 30px;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  transition: 0.3s;
+  transform: translateX(100%);
+}
+
+header .mobile.open {
+  transform: translateX(0);
+}
+
+header .mobile li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header .mobile li a {
+  font-size: 20px;
+  color: white;
+}
+
+header .mobile .close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* responsive */
+@media (max-width: 950px) {
+  header .links {
+    display: none !important;
+  }
+
+  header .showMenuMobile {
+    display: block;
+  }
+
+  header .mobile {
+    display: flex;
+  }
+
+}
+@media(max-width:500px){
+  header{
+    .container{
+      justify-content: center;
+      gap: 10px;
+      height: fit-content;
     }
   }
 }
