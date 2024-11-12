@@ -135,6 +135,9 @@
 .about .MakeDifferent .boxs .box .text.show {
   display: block;
 }
+.art {
+  position: relative;
+}
 
 .top {
   display: flex;
