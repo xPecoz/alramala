@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import JoinUs from "./pages/join us/Join";
 import ConactUsPage from "./pages/contact/Contact";
 import AboutPage from "./pages/AboutUsPage/About";
+import Projects from "./pages/Projects/Projects";
 
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
         {
           path: "/about",
           element: <AboutPage />,
+        },
+        {
+          path: "/projects",
+          element: <Projects />,
         },
       ],
     },

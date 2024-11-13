@@ -27,7 +27,7 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="#">Projects</Link>
+            <Link to="/projects">Projects</Link>
           </li>
           <li>
             <Link to="about">About As</Link>
@@ -52,7 +52,7 @@ const Header = () => {
           </li>
           <li>
             <UilFilesLandscapesAlt color={"#fff"} size={32} />
-            <Link to="#">Projects</Link>
+            <Link to="/projects">Projects</Link>
           </li>
           <li>
             <UilGlobe color={"#fff"} size={32} />

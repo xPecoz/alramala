@@ -1,0 +1,574 @@
+header {
+  background-color: #F5F5F5 !important;
+}
+
+.projects .container {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  gap: 30px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.projects .container .sidebar {
+  position: relative;
+  border-radius: 28px;
+  padding: 25px;
+  width: 350px;
+  transition: 0.3s;
+  box-shadow: 0px 4px 48px 0px rgba(0, 0, 0, 0.10);
+}
+
+.projects .container .sidebar.close {
+  width: 0;
+  opacity: 0;
+  padding: 0;
+}
+
+.projects .container .sidebar .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.projects .container .sidebar .title .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.projects .container .sidebar .title .logo h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.projects .container .sidebar .title p {
+  color: rgba(0, 0, 0, 0.30);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.projects .container .sidebar .category {
+  padding: 20px 0;
+}
+
+.projects .container .sidebar .category .title {
+  cursor: pointer;
+}
+
+.projects .container .sidebar .category .title h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.projects .container .sidebar .category .cheackBoxs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.projects .container .sidebar .category .cheackBoxs .cheackBox {
+  border-radius: 12px;
+  border: 1px solid #00000014;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.projects .container .sidebar .category .cheackBoxs .cheackBox label {
+  color: #000000b3;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.projects .container .sidebar .category .cheackBoxs .cheackBox input {
+  appearance: none;
+  border-radius: 5px;
+  accent-color: #8F7363;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #8F7363;
+  background-color: white;
+  position: relative;
+
+  &:checked {
+    background-color: #8F7363;
+    border-color: #8F7363;
+
+    ::before {
+      content: '✔';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      font-size: 16px;
+      color: white;
+    }
+  }
+}
+
+.projects .container hr {
+  border: none;
+  border-bottom: 1px solid #00000014;
+  width: 90%;
+  margin: auto;
+}
+
+.projects .container .sidebar .time {
+  padding: 20px 0;
+}
+
+.projects .container .sidebar .time .title {
+  cursor: pointer;
+}
+
+.projects .container .sidebar .time .title h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.projects .container .sidebar .time .forms {
+  display: flex;
+  gap: 6px;
+}
+
+.projects .container .sidebar .time .forms div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 50%;
+}
+
+.projects .container .sidebar .time .forms p {
+  color: #00000080;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.projects .container .sidebar .time .forms input {
+  border-radius: 10px;
+  border: 1px solid #00000014;
+  padding: 10px;
+  font-size: 16px;
+  outline: none !important;
+}
+
+.sidebar-btn {
+  position: absolute;
+  left: -10px;
+  top: 30px;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 14px;
+  cursor: pointer;
+  background-color: #8F7363;
+}
+
+.projects .container .boxs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+
+.projects .container .boxs>div {
+  box-shadow: 0px 4px 48px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 28px;
+  padding: 25px;
+}
+
+.projects .container .boxs .search {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 18px 25px;
+}
+
+.projects .container .boxs .search input.search {
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+  outline: none !important;
+  font-size: 20px;
+  color: #00000099;
+  font-weight: 500;
+}
+
+.projects .container .boxs .search select {
+  border-radius: 15px;
+  background-color: #F5F5F5;
+  padding: 10px;
+  color: #000000b3;
+  font-weight: 500;
+  border: 0;
+  font-size: 16px;
+  width: 160px;
+  outline: none !important;
+}
+
+.projects .container .boxs .search>div {
+  display: flex;
+  gap: 10px;
+}
+@media(max-width:1024px){
+  .projects .container .boxs .search>div {
+width: 100%;
+  }
+}
+
+.projects .container .boxs .search .searchBtn {
+  border: 0;
+  outline: none !important;
+  border-radius: 16px;
+  background: #8F7363;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.projects .container .boxs .contentBoxs {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.projects .container .boxs .contentBoxs .projects {
+  height: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.projects .container .boxs .contentBoxs .projects .box {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.projects .container .boxs .contentBoxs .projects .box::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(359deg, black, transparent);
+  opacity: 0.4;
+  z-index: 999999;
+}
+
+.projects .container .boxs .contentBoxs .projects .box:hover img {
+  transform: scale(1.1);
+}
+
+.projects .container .boxs .contentBoxs .projects .box img {
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+}
+
+.projects .container .boxs .contentBoxs .projects .box div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 9999999;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.projects .container .boxs .contentBoxs .projects .box .title {
+  background-color: #8F7363;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 8px;
+}
+
+.projects .container .boxs .contentBoxs .projects .box .date {
+  color: #ffffffcc;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.projects .container .sidebar .category .cheackBoxs,
+.projects .container .sidebar .time .forms {
+  height: 0;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.projects .container .sidebar .category .cheackBoxs.show,
+.projects .container .sidebar .time .forms.show {
+  height: fit-content;
+  opacity: 1;
+}
+
+
+.projects .container .sidebar .category .title .icon,
+.projects .container .sidebar .time .title .icon {
+  transition: 0.3s;
+}
+
+.projects .container .sidebar .category .title .icon.rotate,
+.projects .container .sidebar .time .title .icon.rotate {
+  transform: rotate(180deg);
+}
+
+.projects .container .boxs .links {
+  margin: auto;
+  display: flex;
+  gap: 18px;
+}
+
+.projects .container .boxs .links a {
+  width: 47px;
+  height: 47px;
+  border-radius: 16px;
+  border: 1px solid #8F7363;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2E302E;
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.projects .container .boxs .links a:hover,
+.projects .container .boxs .links a.active {
+  border: 0;
+  background-color: #8F7363;
+  color: white;
+}
+
+.select-box {
+  position: relative;
+  width: 250px;
+  /* Adjust width as needed */
+  font-family: Arial, sans-serif;
+}
+
+.select-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+.arrow {
+  margin-left: 10px;
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #fff;
+  margin-top: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999999999;
+  padding: 10px;
+}
+
+.option {
+  padding: 10px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.option:last-child {
+  border-bottom: none;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  border: 1px solid #b5b5b5;
+  border-radius: 6px;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #8b5c4c;
+  border-color: #8b5c4c;
+}
+
+
+/* Mobile View Adjustments */
+@media (max-width: 1024px) {
+  .projects .container {
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+  }
+
+  .projects .container .sidebar {
+    width: 100%;
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .projects .container .boxs {
+    gap: 20px;
+    margin-top: 50px;
+  }
+
+  .projects .container .boxs .search {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .projects .container .boxs .contentBoxs .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .projects .container .boxs .links a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .select-box {
+    width: 100%;
+  }
+
+  .select-header {
+    width: 100%; /* Full-width for the select header */
+    font-size: 16px; /* Ensure text fits properly */
+  }
+
+  .sidebar-btn {
+    display: block;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #8F7363;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Ensuring the date appears in the box */
+  .projects .container .boxs .contentBoxs .projects .box .date {
+    display: block; /* Make sure date is visible */
+    font-size: 14px;
+    color: #fff;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile-first layout */
+  .projects .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .projects .container .sidebar {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .projects .container .boxs {
+    gap: 15px;
+  }
+
+
+  .projects .container .boxs .search input.search {
+    font-size: 16px;
+  }
+
+  .projects .container .boxs .search select {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .projects .container .boxs .contentBoxs .projects .box img {
+    object-fit: cover;
+  }
+
+  .projects .container .boxs .contentBoxs .projects .box .title {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .select-header {
+    font-size: 14px;
+  }
+
+  .select-box {
+    width: 100%;
+  }
+}
+
+/* Extra Small Devices (Portrait Phones, Small Tablets) */
+@media (max-width: 480px) {
+  .projects .container .sidebar {
+    padding: 20px;
+  }
+
+  .projects .container .boxs .contentBoxs .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .projects .container .boxs .links a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .projects .container .boxs .search input.search {
+    font-size: 16px;
+  }
+
+  .projects .container .boxs .search select {
+    font-size: 12px;
+  }
+
+  .projects .container .boxs .contentBoxs .projects .box .title {
+    font-size: 14px;
+  }
+}
+@media(max-width:350px){
+  .projects .container {
+    flex-direction: column;
+      }
+}
