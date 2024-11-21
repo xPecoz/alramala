@@ -58,6 +58,19 @@ function JoinUs() {
                   <input placeholder="Email" />
                 </div>
                 <div className="form-group">
+                  <label>choose A Job</label>
+                  <select>
+                    <option>Fit out</option>
+                    <option>Furniture</option>
+                    <option>Upholstery</option>
+                    <option>Staircases</option>
+                    <option>Partitions</option>
+                    <option>Ceiling</option>
+                    <option>Doors</option>
+                    <option>Moroccan Handcraft</option>
+                  </select>
+                </div>
+                <div className="form-group">
                   <label>Message</label>
                   <textarea>The Message</textarea>
                 </div>

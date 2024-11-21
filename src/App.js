@@ -5,7 +5,7 @@ import JoinUs from "./pages/join us/Join";
 import ConactUsPage from "./pages/contact/Contact";
 import AboutPage from "./pages/AboutUsPage/About";
 import Projects from "./pages/Projects/Projects";
-
+import Production from "./pages/ProductionLines/Production";
 
 function App() {
   const router = createBrowserRouter([
@@ -32,6 +32,14 @@ function App() {
         {
           path: "/projects",
           element: <Projects />,
+        },
+        {
+          path: "/projects/:categoryParams",
+          element: <Projects />,
+        },
+        {
+          path: "/production",
+          element: <Production />,
         },
       ],
     },

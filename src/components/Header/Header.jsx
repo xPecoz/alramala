@@ -10,12 +10,16 @@ import {
   UilMegaphone,
   UilFastMail,
   UilMultiply,
+  UilAngleDown,
 } from "@iconscout/react-unicons";
 const Header = () => {
   const [showMobile, setShowMobile] = useState(false);
+  const [showProjectsMenu, setShowProjectsMenu] = useState(false);
 
   const showMobileMenu = () => setShowMobile(true);
   const closeMobileMenu = () => setShowMobile(false);
+
+  const handelProjectsMenu = () => setShowProjectsMenu(!showProjectsMenu);
   return (
     <header>
       <div className="container">
@@ -26,8 +30,20 @@ const Header = () => {
           <li>
             <Link to="/">Home</Link>
           </li>
+          <li className="project">
+            <button onClick={handelProjectsMenu}>Projects</button>
+            <UilAngleDown size={27} color={"#1A1A1A"} />
+            <div className={`projects-links ${showProjectsMenu ? "open" : ""}`}>
+              <Link to={"/projects/Hospitality"}>Hospitality</Link>
+              <Link to={"/projects/Commercial"}>Commercial</Link>
+              <Link to={"/projects/Entertainment"}>Entertainment</Link>
+              <Link to={"/projects/Residential"}>Residential</Link>
+              <Link to={"/projects/Education"}>Education</Link>
+              <Link to={"/projects/Work Space"}>Work Space</Link>
+            </div>
+          </li>
           <li>
-            <Link to="/projects">Projects</Link>
+            <Link to="/production">Production Lines</Link>
           </li>
           <li>
             <Link to="about">About As</Link>
@@ -46,23 +62,27 @@ const Header = () => {
           <div className="close" onClick={closeMobileMenu}>
             <UilMultiply color={"#fff"} size={32} />
           </div>
-          <li>
+          <li onClick={closeMobileMenu}>
             <UilEstate color={"#fff"} size={32} />
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li onClick={closeMobileMenu}>
+            <UilFilesLandscapesAlt color={"#fff"} size={32} />
+            <Link to="/production">Production Lines</Link>
+          </li>
+          <li onClick={closeMobileMenu}>
             <UilFilesLandscapesAlt color={"#fff"} size={32} />
             <Link to="/projects">Projects</Link>
           </li>
-          <li>
+          <li onClick={closeMobileMenu}>
             <UilGlobe color={"#fff"} size={32} />
             <Link to="about">About As</Link>
           </li>
-          <li>
+          <li onClick={closeMobileMenu}>
             <UilMegaphone color={"#fff"} size={32} />
             <Link to="/join">Join Us</Link>
           </li>
-          <li>
+          <li onClick={closeMobileMenu}>
             <UilFastMail color={"#fff"} size={32} />
             <Link to="/contact">Contact</Link>
           </li>

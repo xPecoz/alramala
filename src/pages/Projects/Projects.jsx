@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Projects.css";
 import {
   UilAngleDown,
@@ -8,13 +8,21 @@ import {
   UilAngleRightB,
 } from "@iconscout/react-unicons";
 import projectImg from "../../imgs/project.png";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Projects = () => {
+  const { categoryParams } = useParams();
+
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [dateRange, setDateRange] = useState({ fromDate: "", toDate: "" });
-  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedCategories, setSelectedCategories] = useState([
+    categoryParams,
+  ]);
+
+  useEffect(() => {
+    setSelectedCategories(categoryParams);
+  }, [categoryParams]);
 
   return (
     <section className="projects">
@@ -23,7 +31,7 @@ const Projects = () => {
           onDateChange={setDateRange}
           selectedCategories={selectedCategories}
           setSelectedCategories={setSelectedCategories}
-          setDateRange = {setDateRange}
+          setDateRange={setDateRange}
         />
         <div className="boxs">
           <Search
@@ -44,7 +52,12 @@ const Projects = () => {
   );
 };
 
-function Sidebar({ onDateChange, selectedCategories, setSelectedCategories, setDateRange }) {
+function Sidebar({
+  onDateChange,
+  selectedCategories,
+  setSelectedCategories,
+  setDateRange,
+}) {
   const [openSidebar, setOpenSidebar] = useState(true);
   const [fromDate, setFromDate] = useState("");
   const [toDate, setToDate] = useState("");
@@ -86,9 +99,9 @@ function Sidebar({ onDateChange, selectedCategories, setSelectedCategories, setD
     );
     checkboxes.forEach((checkbox) => (checkbox.checked = false));
     setSelectedCategories([]);
-    setDateRange({ fromDate: "", toDate: "" })
-    setFromDate("")
-    setToDate("")
+    setDateRange({ fromDate: "", toDate: "" });
+    setFromDate("");
+    setToDate("");
   };
 
   return (
@@ -224,15 +237,16 @@ function Content({
       selectedCategory === project.title ||
       selectedCategories.some((category) => category === project.title);
 
-    const isSearchMatch = project.title.toLowerCase().includes(searchQuery.toLowerCase());
+    const isSearchMatch = project.title
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
 
     const projectDate = new Date(project.date.split("/").reverse().join("-"));
     const from = dateRange.fromDate ? new Date(dateRange.fromDate) : null;
     const to = dateRange.toDate ? new Date(dateRange.toDate) : null;
 
     const isDateMatch =
-      (!from || projectDate >= from) &&
-      (!to || projectDate <= to);
+      (!from || projectDate >= from) && (!to || projectDate <= to);
 
     return isCategoryMatch && isSearchMatch && isDateMatch && isCategoryMatch2;
   });
@@ -240,7 +254,10 @@ function Content({
   // Calculate the index range for the current page
   const indexOfLastProject = currentPage * itemsPerPage;
   const indexOfFirstProject = indexOfLastProject - itemsPerPage;
-  const currentProjects = filteredProjects.slice(indexOfFirstProject, indexOfLastProject);
+  const currentProjects = filteredProjects.slice(
+    indexOfFirstProject,
+    indexOfLastProject
+  );
 
   // Number of pages
   const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
@@ -270,26 +287,36 @@ function Content({
       <div className="links">
         {/* Previous Page Button */}
         {currentPage > 1 && (
-          <Link to="#" onClick={() => handlePageChange(currentPage - 1)} className="active">
+          <Link
+            to="#"
+            onClick={() => handlePageChange(currentPage - 1)}
+            className="active"
+          >
             <UilAngleLeftB size={37} color="white" />
           </Link>
         )}
-        
+
         {/* Pagination Links */}
-        {Array.from({ length: totalPages }, (_, index) => index + 1).map((pageNumber) => (
-          <Link
-            key={pageNumber}
-            to="#"
-            onClick={() => handlePageChange(pageNumber)}
-            className={currentPage === pageNumber ? "active" : ""}
-          >
-            {pageNumber}
-          </Link>
-        ))}
-        
+        {Array.from({ length: totalPages }, (_, index) => index + 1).map(
+          (pageNumber) => (
+            <Link
+              key={pageNumber}
+              to="#"
+              onClick={() => handlePageChange(pageNumber)}
+              className={currentPage === pageNumber ? "active" : ""}
+            >
+              {pageNumber}
+            </Link>
+          )
+        )}
+
         {/* Next Page Button */}
         {currentPage < totalPages && (
-          <Link to="#" onClick={() => handlePageChange(currentPage + 1)} className="active">
+          <Link
+            to="#"
+            onClick={() => handlePageChange(currentPage + 1)}
+            className="active"
+          >
             <UilAngleRightB size={37} color="white" />
           </Link>
         )}
