@@ -1,3 +1,6 @@
+.aboutpage{
+  padding: 110px 0;
+}
 .about .ThingsWeValue .container {
   display: flex;
   flex-direction: column;

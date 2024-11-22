@@ -3,6 +3,7 @@ header {
 }
 .projects{
   z-index: -11  ;
+  padding: 110px 0;
 }
 
 .projects .container {
