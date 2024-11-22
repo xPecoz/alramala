@@ -5,7 +5,7 @@ import profileImg from '../../imgs/profileImg.png';
 
 function DashboardHeader({ toggleSidebar }) {
 return (
-    <header className="header">
+    <header className="dash-header">
         <div className="container">
             <button className="side-bar-toggle-btn"  onClick={toggleSidebar}><i class="uil uil-apps"></i></button>
             <div className="search">

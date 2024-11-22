@@ -21,7 +21,7 @@ const Header = () => {
 
   const handelProjectsMenu = () => setShowProjectsMenu(!showProjectsMenu);
   return (
-    <header>
+    <header className="header">
       <div className="container">
         <div className="logo">
           <img src={logo1} alt="Logo"></img>

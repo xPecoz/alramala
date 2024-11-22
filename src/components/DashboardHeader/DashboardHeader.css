@@ -5,12 +5,12 @@ button {
     border: none;
 }
 
-.header {
+.dash-header .header {
     background-color: #FFFFFF !important;
     height: 90px;
 }
 
-.header .container {
+.dash-header .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -20,7 +20,7 @@ button {
     background-color: white;
 }
 
-.header .container .side-bar-toggle-btn {
+.dash-header .container .side-bar-toggle-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,11 +31,11 @@ button {
     cursor: pointer;
 }
 
-.header .container .side-bar-toggle-btn i {
+.dash-header .container .side-bar-toggle-btn i {
     color: white;
 }
 
-.header .container .search {
+.dash-header .container .search {
     position: relative;
     width: 30%;
     height: 40px;
@@ -44,7 +44,7 @@ button {
     padding: 0 10px;
 }
 
-.header .container .search input {
+.dash-header .container .search input {
     width: 100%;
     height: 100%;
     border: none;
@@ -52,14 +52,14 @@ button {
     color: black;
 }
 
-.header .container .search i {
+.dash-header .container .search i {
     position: absolute;
     top: 10px;
     right: 15px;
     cursor: pointer;
 }
 
-.header .container .profile .notifications {
+.dash-header .container .profile .notifications {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,7 @@ button {
     position: relative;
 }
 
-.header .container .profile .notifications::before {
+.dash-header .container .profile .notifications::before {
     content: "";
     width: 10px;
     height: 10px;
@@ -83,11 +83,11 @@ button {
     right: 0;
 }
 
-.header .container .profile .notifications i {
+.dash-header .container .profile .notifications i {
     font-size: 22px;
 }
 
-.header .container .profile .switch-lang {
+.dash-header .container .profile .switch-lang {
     display: flex;
     gap: 5px;
     align-items: center;
@@ -100,7 +100,7 @@ button {
     cursor: pointer;
 }
 
-.header .container .profile .switch-lang .active {
+.dash-header .container .profile .switch-lang .active {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,7 +110,7 @@ button {
     border-radius: 50%;
 }
 
-.header .container .profile {
+.dash-header .container .profile {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -118,7 +118,7 @@ button {
     gap: 20px;
 }
 
-.header .container .profile-img img {
+.dash-header .container .profile-img img {
     width: 60px;
     height: 60px;
     border-radius: 50%;

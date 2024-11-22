@@ -1,9 +1,12 @@
-header {
+.header{
   position: fixed;
   top: 0;
   right: 0;
   z-index: 112121;
   left: 0;
+}
+header {
+
   .container {
     display: flex;
     align-items: center;
