@@ -1,0 +1,32 @@
+
+.dashboard-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dashboard-content {
+    display: flex;
+    position: relative;
+  }
+  
+  .content-area {
+    flex-grow: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 10;
+  }
+  
+  .overlay-active {
+    position: relative;
+    z-index: 0;
+  }

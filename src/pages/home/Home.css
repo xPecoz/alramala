@@ -1,6 +1,8 @@
 .home .hero {
   width: 100%;
   position: relative;
+  top: 100px;
+  margin-bottom: 70px;
 
   .container {
     height: calc(100vh - 70px);
@@ -626,6 +628,7 @@
     color: #1a1a1a;
   }
 }
+
 .contact .container {
   display: flex;
   justify-content: center;
@@ -639,10 +642,12 @@
   border-radius: 7px;
   background-color: #2e302e;
 }
+
 .contact .container .heading {
   margin-top: 20px;
   margin-bottom: 30px;
 }
+
 .contact .container .heading h1 {
   font-size: 50px;
   font-weight: bold;
@@ -650,6 +655,7 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
 .contact .container .heading p {
   color: #b1b2b1;
 }
@@ -665,9 +671,11 @@
   border-radius: 10px;
   background-color: #3e3f3c;
 }
-.contact > h1{
+
+.contact>h1 {
   font-size: 30px;
 }
+
 .Form {
   display: flex;
   flex-direction: column;
@@ -678,13 +686,16 @@
   padding: 10px 20px 20px 20px;
   border-radius: 10px;
 }
+
 .Form h1 {
   color: white;
 }
+
 .Form p {
   color: #d4d5d4;
   max-width: 425px;
 }
+
 .Form form {
   display: flex;
   flex-direction: column;
@@ -693,11 +704,13 @@
   margin-top: 20px;
   width: 100%;
 }
+
 .Form form .name-input {
   display: flex;
   flex-direction: row;
   width: 100%;
   gap: 10px;
+
   input {
     width: 50%;
   }
@@ -715,6 +728,7 @@
   color: #d4d5d4;
   font-size: 16px;
 }
+
 .Form form .message {
   height: 110px;
   line-height: -1;
@@ -756,6 +770,7 @@
   margin-bottom: 20px;
   height: 100%;
 }
+
 .contact .container .form-container .image img {
   width: 100%;
   height: 100%;
@@ -766,23 +781,27 @@
 
 @media (max-width: 1240px) {
   .contact .container .heading {
-  margin-bottom: 0; 
-}
+    margin-bottom: 0;
+  }
+
   .contact .container .form-container {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     padding: 0;
   }
+
   .contact .container .form-container .image {
     margin-bottom: 0;
   }
 }
+
 @media (max-width: 600px) {
   .Form form .name-input {
     flex-direction: column;
     gap: 0;
   }
+
   .Form form .name-input input {
     width: 100%;
   }
@@ -842,11 +861,13 @@
     display: none;
   }
 }
-@media(max-width:500px){
+
+@media(max-width:500px) {
   .home .about .container .info .boxs {
     display: block;
   }
-  .home .about .container .info h1{
+
+  .home .about .container .info h1 {
     font-size: 35px;
   }
 }

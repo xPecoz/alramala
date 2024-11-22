@@ -1,6 +1,9 @@
 header {
   background-color: #F5F5F5 !important;
 }
+.projects{
+  z-index: -11  ;
+}
 
 .projects .container {
   min-height: calc(100vh - 70px);

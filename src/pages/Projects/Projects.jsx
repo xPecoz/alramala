@@ -17,11 +17,11 @@ const Projects = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [dateRange, setDateRange] = useState({ fromDate: "", toDate: "" });
   const [selectedCategories, setSelectedCategories] = useState([
-    categoryParams,
+    categoryParams
   ]);
 
   useEffect(() => {
-    setSelectedCategories(categoryParams);
+    setSelectedCategories(()=> categoryParams?.length > 0 ? categoryParams : []);
   }, [categoryParams]);
 
   return (
@@ -77,7 +77,7 @@ function Sidebar({
     setOpenSidebar(!openSidebar);
   };
   const handleCheckboxChange = (label) => {
-    const updatedCategories = selectedCategories.includes(label)
+    const updatedCategories = selectedCategories?.includes(label)
       ? selectedCategories.filter((category) => category !== label)
       : [...selectedCategories, label];
     setSelectedCategories(updatedCategories);
@@ -139,7 +139,7 @@ function Sidebar({
                 <input
                   id={`check${index + 1}`}
                   type="checkbox"
-                  checked={selectedCategories.includes(label)}
+                  checked={selectedCategories?.includes(label)}
                   onChange={() => handleCheckboxChange(label)}
                 />
               </div>
@@ -228,14 +228,14 @@ function Content({
   // Filtered projects based on the selected categories, search query, and date range
   const filteredProjects = projects.filter((project) => {
     const isCategoryMatch =
-      selectedCategories.length === 0 ||
+      selectedCategories?.length === 0 ||
       selectedCategory === project.title ||
-      selectedCategories.includes(project.title);
+      selectedCategories?.includes(project.title);
 
     const isCategoryMatch2 =
       selectedCategory === "All" ||
       selectedCategory === project.title ||
-      selectedCategories.some((category) => category === project.title);
+      selectedCategories?.some((category) => category === project.title);
 
     const isSearchMatch = project.title
       .toLowerCase()
