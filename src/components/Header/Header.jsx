@@ -46,7 +46,7 @@ const Header = () => {
             <Link to="/production">Production Lines</Link>
           </li>
           <li>
-            <Link to="about">About As</Link>
+            <Link to="about">About Us</Link>
           </li>
           <li>
             <Link to="/join">Join Us</Link>
@@ -76,7 +76,7 @@ const Header = () => {
           </li>
           <li onClick={closeMobileMenu}>
             <UilGlobe color={"#fff"} size={32} />
-            <Link to="about">About As</Link>
+            <Link to="about">About Us</Link>
           </li>
           <li onClick={closeMobileMenu}>
             <UilMegaphone color={"#fff"} size={32} />
